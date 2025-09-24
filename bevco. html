@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>BEVCO Homepage</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&amp;family=Roboto:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#ecb613",
+                        "background-light": "#f8f8f6",
+                        "background-dark": "#221d10"
+                    },
+                    fontFamily: {
+                        display: ["Playfair Display", "serif"],
+                        body: ["Roboto", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.25rem",
+                        lg: "0.5rem",
+                        xl: "0.75rem",
+                        full: "9999px"
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .bg-slice-1 {
+            background-color: rgba(0, 0, 0, 0.4);
+            clip-path: polygon(0 0, 100% 0, 100% 70%, 0% 100%);
+        }
+        .bg-slice-2 {
+            background-color: rgba(0, 0, 0, 0.6);
+            clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
+        }
+        .bg-slice-3 {
+            background-color: rgba(0, 0, 0, 0.8);
+            clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
+        }
+        .background-container {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            filter: blur(4px);
+            z-index: 0;
+        }
+        .background-slice {
+            flex: 1;
+            background-image: url('https://images.unsplash.com/photo-1619451426760-58883451555e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+            background-size: 300% 100%;
+            transition: background-position 0.6s ease-in-out;
+        }
+        .background-slice-1 {
+            background-position: 0% 50%;
+        }
+        .background-slice-2 {
+            background-position: 50% 50%;
+        }
+        .background-slice-3 {
+            background-position: 100% 50%;
+        }
+        .carousel {
+            position: relative;
+        }
+        .carousel-container {
+            display: flex;
+            overflow-x: scroll;
+            scroll-behavior: smooth;
+            scrollbar-width: none;-ms-overflow-style: none;}
+        .carousel-container::-webkit-scrollbar { 
+            display: none;}
+        .carousel-item {
+            flex: 0 0 auto;
+        }
+        .carousel-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 10;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-body text-white">
+<div class="relative min-h-screen w-full overflow-x-hidden">
+<div class="background-container">
+<div class="background-slice background-slice-1"></div>
+<div class="background-slice background-slice-2"></div>
+<div class="background-slice background-slice-3"></div>
+</div>
+<div class="absolute inset-0 bg-slice-3"></div>
+<div class="absolute inset-0 bg-slice-2"></div>
+<div class="absolute inset-0 bg-slice-1"></div>
+<div class="relative z-10 flex h-full min-h-screen flex-col">
+<header class="border-b border-primary/30">
+<div class="container mx-auto flex items-center justify-between px-6 py-4">
+<div class="flex items-center gap-12">
+<a class="text-3xl font-display font-bold text-white" href="#">BE<span class="text-primary">V</span>CO</a>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-white/80 hover:text-white transition-colors duration-300" href="#">Our Story</a>
+<a class="text-white/80 hover:text-white transition-colors duration-300" href="#">Products</a>
+<a class="text-white/80 hover:text-white transition-colors duration-300" href="#">Cocktails</a>
+<a class="text-white/80 hover:text-white transition-colors duration-300" href="#">Visit Us</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<a class="hidden sm:block text-white/80 hover:text-white transition-colors duration-300" href="#">Shop</a>
+<button class="rounded bg-primary/20 dark:bg-primary/30 px-6 py-2 text-sm font-semibold text-white transition-colors hover:bg-primary/40 dark:hover:bg-primary/50">
+                            Sign In
+                        </button>
+</div>
+</div>
+</header>
+<main class="flex-grow">
+<div class="container mx-auto px-6 py-24 text-center flex flex-col items-center">
+<h1 class="text-5xl md:text-7xl font-display font-bold text-white leading-tight">
+<span class="text-primary">BEVCO</span> Classic:
+                        <br/>
+<span class="text-4xl md:text-6xl font-light text-white/90">Everything you can find and perfected overtime.</span>
+</h1>
+<p class="mt-8 max-w-2xl text-lg text-white/80">
+                        Experience the rich heritage and exceptional quality of BEVCO's finest spirits. Each bottle tells a story of craftsmanship and dedication to excellence passed down through generations.
+                    </p>
+<div class="mt-12">
+<a class="inline-block rounded-lg bg-primary px-10 py-4 text-lg font-semibold text-background-dark transition-transform hover:scale-105" href="#">
+                            Discover our stores
+                        </a>
+</div>
+</div>
+<div class="space-y-20 pb-20">
+<section id="foreign">
+<div class="container mx-auto px-6">
+<h2 class="text-4xl font-display font-bold text-white text-center mb-10 border-b-2 border-primary/50 pb-4 inline-block mx-auto">Foreign Selection</h2>
+<div class="carousel relative group">
+<div class="carousel-container flex gap-8 py-4" id="foreign-carousel">
+<div class="carousel-item w-72 bg-black/30 backdrop-blur-sm rounded-lg p-6 border border-primary/20 hover:border-primary/50 transition-all duration-300">
+<img alt="Johnnie Walker" class="h-64 w-full object-contain mb-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2J_OglHYM4f18k3-J5zX0gSSGiJ7cOIJ2a43TCWQfSYHaGprcgpHQRCpSXxPNF_cfa6ptAlT3WpWxXGVO5T-BAaoOCM4IWwjUbjj5OqsrJSTnE9uIsX_ZKVv_ojSgOtAQnPGO_5Frt4NrfhrIoS2am7WBQGa2CcGwGEMCnC9iZRFf6zuZ5jelHO7XbGoCDsgyb5Guz6Sy9Ht7j2DZjyZTCldfpWyGhjO_8OifjsK5Fqh9HDI1bQuK9CO2CjZR4Y9miVl2rIzU9bwn"/>
+<h3 class="text-xl font-display text-primary">Johnnie Walker</h3>
+<p class="text-white/70 text-sm">Scotch Whisky</p>
+</div>
+<div class="carousel-item w-72 bg-black/30 backdrop-blur-sm rounded-lg p-6 border border-primary/20 hover:border-primary/50 transition-all duration-300">
+<img alt="Jack Daniel's" class="h-64 w-full object-contain mb-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCaX0BaO9WcXLmsSzQM5jLFFX6AlQml1DXOOnD930uN73ZelRnorZPtfPgJTyecuGHNeIv_IVKvu5tNofcP8qto5yqTtGPDnDE_7UycVLg5Wt8CpmjkSgq58Q6K3hkLiot0ktTsa1vP0LZEqZwE12xidJRRPSVDqc5ordYD0xewUxshcmwHzZxNbmE3k7fxG4VAgdzmMj6SNRoBcQ-_85-yX6hwvzCOqZhJ0YC3d8dqYcpsrskL_rJg-l-6E66VxNQDot1r6w0WEU1d"/>
+<h3 class="text-xl font-display text-primary">Jack Daniel's</h3>
+<p class="text-white/70 text-sm">Tennessee Whiskey</p>
+</div>
+<div class="carousel-item w-72 bg-black/30 backdrop-blur-sm rounded-lg p-6 border border-primary/20 hover:border-primary/50 transition-all duration-300">
+<img alt="Absolut Vodka" class="h-64 w-full object-contain mb-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAY3WT66UduZCGX4YjwGQMk2MITFB4__cKz32CkXRvD9XHrELE4esGWXySQevJgQMl2wbYOXsJH222MRj0oNy_1RwAscZyaQJ2zcmQtHEByfo6Pq-QYiVEHiWdlkopN4nedqUZC-oSTPO9EIda6uTpDPFmFOZaCFEOmPTIqVsp8hW8bea6tUpXTKB37sY7quXJaWKpyjkgMyctJRNUoDMgiN-ETFzZ_1eqT83qx3KHyImaU-LScvaxGWU6sMdpR8jothZ9BprDQa2ty"/>
+<h3 class="text-xl font-display text-primary">Absolut Vodka</h3>
+<p class="text-white/70 text-sm">Swedish Vodka</p>
+</div>
+<div class="carousel-item w-72 bg-black/30 backdrop-blur-sm rounded-lg p-6 border border-primary/20 hover:border-primary/50 transition-all duration-300">
+<img alt="Bacardi Rum" class="h-64 w-full object-contain mb-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIg8oSzj4omIi_rKAfIV82iI23YItr2RUWjaNpv1YRwPQuPO8L6f_lPywnyviEXctjKv9Foyr-J33zjIwRU9HNLs6dnaf6BC4PK6duuYFn4xDmkuE98YnPVMMZ6eBg_0Up34Gyu8b20pQyY0fhUKGhFPoH5-E4jh_KOMDlbZcjhY9FhvWZ7YWkKlEVTztnxvpxrysZfCwnUQTsVeMUb8VNBmsd8ewjxzRrDOVjkBXjKBS3G7Xrp-vygGxisn7hmJFAvULb-VoODREE"/>
+<h3 class="text-xl font-display text-primary">Bacardi</h3>
+<p class="text-white/70 text-sm">Superior Rum</p>
+</div>
+<div class="carousel-item w-72 bg-black/30 backdrop-blur-sm rounded-lg p-6 border border-primary/20 hover:border-primary/50 transition-all duration-300">
+<img alt="Chivas Regal" class="h-64 w-full object-contain mb-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBlaIfGqOWX_lhJc37wi5gwMndq0sf1lCfb_POL2tby94haU4DlinLCysHwOhZr6c6c6FUTyZuASoSFcsqiJXQm9iqGDp1IuqttEapsaQChnshPm-A-NGgHVBqE0xlpQEFZF9x5wuUGLWqsuM_gcnVN7MBvmgI7hTaKakS0G6kkAid25c76cAaqLSOnI6i05MNsw3ciFGkBFGKEegR7qJuOucbfjd_hHxf690Cos_E97M9Ut9H41i3_GZjuvn1KjDXakSiFEO3g7CBC"/>
+<h3 class="text-xl font-display text-primary">Chivas Regal</h3>
+<p class="text-white/70 text-sm">Blended Scotch Whisky</p>
+</div>
+<div class="carousel-item w-72 bg-black/30 backdrop-blur-sm rounded-lg p-6 border border-primary/20 hover:border-primary/50 transition-all duration-300">
+<img alt="Jose Cuervo" class="h-64 w-full object-contain mb-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBnuYpWnorolfldu225RlM_VLOTJ77nRgmIkhLw58ujHy5A_GcDOeWFHZanIhZtfJwECst-8XUsGW7ZgD-vYVt07BXDI7tMUCFUOGc_6aKmOqAB9kgr-XIuuTd7GpVDQkOOGJstrAmR15ix8dPFXo-QxgKW9ySG_Gr8JrXen3N8Ln5IqFCB_1WM9uRHhn4XhwoXCnTKqN5SuTQ1ymVzWqFduOecRLMlAQvk0CCAHpp3GOka0CNIsee27VBuiZJcwG-QYiL_b9RkjzgS"/>
+<h3 class="text-xl font-display text-primary">Jose Cuervo</h3>
+<p class="text-white/70 text-sm">Tequila</p>
+</div>
+</div>
+<button class="carousel-button left-0 -translate-x-4 bg-black/50 text-primary rounded-full p-2 hover:bg-primary hover:text-black transition-all duration-300 opacity-0 group-hover:opacity-100" onclick="document.getElementById('foreign-carousel').scrollBy({left: -320, behavior: 'smooth'})">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="carousel-button right-0 translate-x-4 bg-black/50 text-primary rounded-full p-2 hover:bg-primary hover:text-black transition-all duration-300 opacity-0 group-hover:opacity-100" onclick="document.getElementById('foreign-carousel').scrollBy({left: 320, behavior: 'smooth'})">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+</section>
+<section id="indian">
+<div class="container mx-auto px-6">
+<h2 class="text-4xl font-display font-bold text-white text-center mb-10 border-b-2 border-primary/50 pb-4 inline-block mx-auto">Indian Treasures</h2>
+<div class="carousel relative group">
+<div class="carousel-container flex gap-8 py-4" id="indian-carousel">
+<div class="carousel-item w-72 bg-black/30 backdrop-blur-sm rounded-lg p-6 border border-primary/20 hover:border-primary/50 transition-all duration-300">
+<img alt="Amrut" class="h-64 w-full object-contain mb-4" src="https://lh3.googleusercontent.com/pw/AP1GczM_t-V7tQn6kK7L8n8V8e5R3o_F9D4V5e2E3Z4H2f8K8b2W1b3e8c9V3f4P0G7h1C6i5g2J7h6X5C4K9l0m1n2p3R4s5T6Q7r8s9t0U_A-Q-A"/>
+<h3 class="text-xl font-display text-primary">Amrut</h3>
+<p class="text-white/70 text-sm">Single Malt Whisky</p>
+</div>
+<div class="carousel-item w-72 bg-black/30 backdrop-blur-sm rounded-lg p-6 border border-primary/20 hover:border-primary/50 transition-all duration-300">
+<img alt="Paul John" class="h-64 w-full object-contain mb-4" src="https://lh3.googleusercontent.com/pw/AP1GczO4B8G5Q6B2F3C4B6g5F2h6c7k8m3b4l5i6k7m8n9o0p1q2r3s4t5u6v7w8x9y0z_a-b-c-d-e-f-g"/>
+<h3 class="text-xl font-display text-primary">Paul John</h3>
+<p class="text-white/70 text-sm">Indian Single Malt</p>
+</div>
+<div class="carousel-item w-72 bg-black/30 backdrop-blur-sm rounded-lg p-6 border border-primary/20 hover:border-primary/50 transition-all duration-300">
+<img alt="Rampur" class="h-64 w-full object-contain mb-4" src="https://lh3.googleusercontent.com/pw/AP1GczP_A-B-C-D-E-F-G-H-I-J-K-L-M-N-O-P-Q-R-S-T-U-V-W-X-Y-Z_a-b-c-d-e-f-g-h-i-j-k-l-m-n-o-p-q-r"/>
+<h3 class="text-xl font-display text-primary">Rampur</h3>
+<p class="text-white/70 text-sm">Indian Single Malt Whisky</p>
+</div>
+<div class="carousel-item w-72 bg-black/30 backdrop-blur-sm rounded-lg p-6 border border-primary/20 hover:border-primary/50 transition-all duration-300">
+<img alt="Old Monk" class="h-64 w-full object-contain mb-4" src="https://lh3.googleusercontent.com/pw/AP1GczN_l-k-j-i-h-g-f-e-d-c-b-a-z-y-x-w-v-u-t-s-r-q-p-o-n-m-l-k-j-i-h-g-f-e-d-c-b-a-Z"/>
+<h3 class="text-xl font-display text-primary">Old Monk</h3>
+<p class="text-white/70 text-sm">Indian Dark Rum</p>
+</div>
+<div class="carousel-item w-72 bg-black/30 backdrop-blur-sm rounded-lg p-6 border border-primary/20 hover:border-primary/50 transition-all duration-300">
+<img alt="Magic Moments" class="h-64 w-full object-contain mb-4" src="https://lh3.googleusercontent.com/pw/AP1GczM_A-B-C-D-E-F-G-H-I-J-K-L-M-N-O-P-Q-R-S-T-U-V-W-X-Y-Z_a-b-c-d-e-f-g-h-i-j-k-l-m-n-o-p-q"/>
+<h3 class="text-xl font-display text-primary">Magic Moments</h3>
+<p class="text-white/70 text-sm">Vodka</p>
+</div>
+</div>
+<button class="carousel-button left-0 -translate-x-4 bg-black/50 text-primary rounded-full p-2 hover:bg-primary hover:text-black transition-all duration-300 opacity-0 group-hover:opacity-100" onclick="document.getElementById('indian-carousel').scrollBy({left: -320, behavior: 'smooth'})">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="carousel-button right-0 translate-x-4 bg-black/50 text-primary rounded-full p-2 hover:bg-primary hover:text-black transition-all duration-300 opacity-0 group-hover:opacity-100" onclick="document.getElementById('indian-carousel').scrollBy({left: 320, behavior: 'smooth'})">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+</section>
+<section id="kerala">
+<div class="container mx-auto px-6">
+<h2 class="text-4xl font-display font-bold text-white text-center mb-10 border-b-2 border-primary/50 pb-4 inline-block mx-auto">Kerala's Pride</h2>
+<div class="carousel relative group">
+<div class="carousel-container flex gap-8 py-4" id="kerala-carousel">
+<div class="carousel-item w-72 bg-black/30 backdrop-blur-sm rounded-lg p-6 border border-primary/20 hover:border-primary/50 transition-all duration-300">
+<img alt="Jawan" class="h-64 w-full object-contain mb-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBr0XDS_ebWiZyibTyubkbIJOWHRFwC5qMT4G6yEfn9lwT6Fec7y-cr3SKxaZ7k6FfK9qoyoXu_-7e2yK8MANry481LKDUpoqRH8Ab971fuJp1cd74vU-FFyhE7eQ50SipnxI6xdTKubS3QAYckKsQmURY6HIVzWEfPKZZK7_8znzD3YLciBBhBdGOt4-kudbFIk8hWbmpvX4AHY691pCew6-v4TfVg1rY1w7aRRcsXNccTUf8Z9FbrHiyGnNVzcGU5-ZamP5eG1u93"/>
+<h3 class="text-xl font-display text-primary">Jawan</h3>
+<p class="text-white/70 text-sm">Rum</p>
+</div>
+<div class="carousel-item w-72 bg-black/30 backdrop-blur-sm rounded-lg p-6 border border-primary/20 hover:border-primary/50 transition-all duration-300">
+<img alt="McDowell's No.1" class="h-64 w-full object-contain mb-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCUJ-xXuarYWqTzAjsw7upStsutj1irtJwTijv_x8nRg4SOpBwAXU9DWsMe4eATLuC6iXBDZQhHdrFbefevlbCo2IxVyakNUR0G1DgL3ecjPe2iaKg7e0gUzRrrwxo9Nzw1gBIxuQ1Oz9ty-exbL45qm5rfHybOtOAMYgLW-bYG6MGKi5KpZW1zO8jGP_nFT6sS3iKeIqgDq9jChU2jlA4KjkN52NoV_bmPRM2WPeHRHyNx87lQmN07R1FuOSEA_SszbU_yw0IIW31"/>
+<h3 class="text-xl font-display text-primary">McDowell's No.1</h3>
+<p class="text-white/70 text-sm">Celebration Rum</p>
+</div>
+<div class="carousel-item w-72 bg-black/30 backdrop-blur-sm rounded-lg p-6 border border-primary/20 hover:border-primary/50 transition-all duration-300">
+<img alt="Old Monk Supreme" class="h-64 w-full object-contain mb-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhC8QNAJysipdOtqYR5aiGe2SauTCDb6_sAhpdhiqFaxFLYEL3Ecb_C2cKStgfCqNcu3uraJDjV8gyXdjX-RDFjb7LQc4-6bLdG3-7anWVODljG8pYsYkhWnapzLvVgA0lJvL2hxXjTEGRRVQAr0GmBMzl5LIx3_dg9tO4d1es5fhZhe1GZWwwarOaVJdjkOG9Mi5WBPEfOkYt8qK4G4_yhsw_6DWtB90AAhUddcqRt-IurClIPBYDJ0fIL_pM25GoVSPdi7WMtdir"/>
+<h3 class="text-xl font-display text-primary">Old Monk Supreme</h3>
+<p class="text-white/70 text-sm">XXX Rum</p>
+</div>
+<div class="carousel-item w-72 bg-black/30 backdrop-blur-sm rounded-lg p-6 border border-primary/20 hover:border-primary/50 transition-all duration-300">
+<img alt="Contessa" class="h-64 w-full object-contain mb-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvigDZYUkL_Cf9VoXGWukRtO_cRgeohcqWkRxKQqPKNSGOcTUrl83a6SPLrK1lCBaxpkn9gO0JeCrd6nIIn8E8mlBWMkTW9HuCMdIkHVSCi09mt_RS39oO_uOkRzokCS2pCX9lIShqhy497JBrNUOPSBw9tuRLxyOj6IFudg69EAeVlyS4LEHjE3C7J8BQ3e4ts1ruMxipzzoMip_-D551s13Mu219ry2pnwlgjrEIi2uDhFbp4K-Zc6QvMouyf9z43t5NWvfuEtA6"/>
+<h3 class="text-xl font-display text-primary">Contessa</h3>
+<p class="text-white/70 text-sm">XXX Rum</p>
+</div>
+<div class="carousel-item w-72 bg-black/30 backdrop-blur-sm rounded-lg p-6 border border-primary/20 hover:border-primary/50 transition-all duration-300">
+<img alt="Maharani Gin" class="h-64 w-full object-contain mb-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBlLtuEKR6J16gluYB-U7IEz1lMXmgSxK4N7SiciYt00AYUm9sNknGnZUAoaZE3VGVzPQ8GMP3Fqnjgy4-JayXR1skGP_MT-anTymeS50m4Wp6oFCx40lp0L93_IjWIGd0l5FZjiFzniBkocE7MxgROywfM8Q1aFVRuXvl7CLlklPKzZnz5-DWKgJFnSQVoTGiDEfSKwv4V4mG8yfQr2VYYPV-BCCzWbVSdzyQaQT9KnTt9zSGf5UdY8sueGzKVhX7p5nvY-LFuGTDC"/>
+<h3 class="text-xl font-display text-primary">Maharani Gin</h3>
+<p class="text-white/70 text-sm">Kerala Gin</p>
+</div>
+</div>
+<button class="carousel-button left-0 -translate-x-4 bg-black/50 text-primary rounded-full p-2 hover:bg-primary hover:text-black transition-all duration-300 opacity-0 group-hover:opacity-100" onclick="document.getElementById('kerala-carousel').scrollBy({left: -320, behavior: 'smooth'})">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="carousel-button right-0 translate-x-4 bg-black/50 text-primary rounded-full p-2 hover:bg-primary hover:text-black transition-all duration-300 opacity-0 group-hover:opacity-100" onclick="document.getElementById('kerala-carousel').scrollBy({left: 320, behavior: 'smooth'})">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+</section>
+</div>
+</main>
+</div>
+</div>
+</body></html>
